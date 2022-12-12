@@ -579,4 +579,13 @@ img {
     border-radius: 4px;
 }
 
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--white-color);
+}
 }
