@@ -23,6 +23,7 @@
     social & client link color          #AFB1B8
 
     footer soclink background           rgba(255, 255, 255, 0.1)
+    background about project            rgba(33, 150, 243, 0.9)
 */
 
 :root {
@@ -42,6 +43,7 @@
     --project-border-color: #EEEEEE;
     --social-client-link-color: #AFB1B8;
     --footer-soclink-background: rgba(255, 255, 255, 0.1);
+    --background-about-project: rgba(33, 150, 243, 0.9);
     --width-gap: 30px;
 }
 
@@ -555,6 +557,36 @@ img {
 }
 
 
+/* About project */
+
+.about-project {
+    position: relative;
+}
+
+.about-project::before {
+    position: absolute;
+    display: inline-block;
+    visibility: hidden;
+    content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.';
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    color: var(--white-color);
+    /* font-family: 'Roboto'; */
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    letter-spacing: 0.03em;
+    background-color: var(--background-about-project);
+}
+
+.about-project:hover::before {
+    visibility: visible;
+}
+
+
 /* Hiden title */
 
 .visually-hidden {
@@ -568,6 +600,9 @@ img {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+
+
 /* Modal window */
 
 .backdrop {
@@ -579,6 +614,11 @@ img {
     border-radius: 4px;
 }
 
+.backdrop.is-hiden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -588,4 +628,11 @@ img {
     height: 581px;
     background-color: var(--white-color);
 }
+
+.close-btn {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
