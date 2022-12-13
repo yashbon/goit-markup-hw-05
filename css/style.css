@@ -321,9 +321,9 @@ img {
     position: absolute;
     bottom: 0;
     width: 370px;
-    height: 70px;
+    /* height: 70px; */
     padding: 27px 0;
-    text-align: center;
+    /* text-align: center; */
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
@@ -637,7 +637,7 @@ img {
     border-radius: 4px;
 }
 
-.backdrop.is-hiden {
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
 }

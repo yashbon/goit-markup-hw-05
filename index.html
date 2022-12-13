@@ -54,7 +54,7 @@
         <section class="order-service">
             <div class="overlay">
                 <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="order-btn">Замовити послугу</button>
+                <button type="button" class="order-btn" data-modal-open>Замовити послугу</button>
             </div>
         </section>
 
@@ -375,9 +375,9 @@
         </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop is-hiden">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="close-btn">
+            <button class="close-btn" data-modal-close>
                 <svg class="modal-icon">
                     <use href="./images/icons.svg#close"></use>
                 </svg>
