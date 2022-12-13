@@ -23,6 +23,7 @@
     social & client link color          #AFB1B8
 
     footer soclink background           rgba(255, 255, 255, 0.1)
+    backgroround sevice title           rgba(47, 48, 58, 0.8)
     background about project            rgba(33, 150, 243, 0.9)
 */
 
@@ -44,6 +45,7 @@
     --social-client-link-color: #AFB1B8;
     --footer-soclink-background: rgba(255, 255, 255, 0.1);
     --background-about-project: rgba(33, 150, 243, 0.9);
+    --backgroround-sevice-title: rgba(47, 48, 58, 0.8);
     --width-gap: 30px;
 }
 
@@ -311,6 +313,26 @@ img {
     text-align: center;
 }
 
+.list-services-item {
+    position: relative;
+}
+
+.services-item-title {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    padding: 27px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background: var(--backgroround-sevice-title);
+}
+
 
 /* Team styles */
 
@@ -567,7 +589,8 @@ img {
     position: absolute;
     display: inline-block;
     visibility: hidden;
-    content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.';
+    content: '';
+    /* content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.'; */
     width: 100%;
     height: 100%;
     padding: 63px 24px;
@@ -576,7 +599,7 @@ img {
     /* font-style: normal; */
     /* font-weight: 400; */
     font-size: 18px;
-    line-height: 28px;
+    line-height: 1.56;
     /* or 156% */
     letter-spacing: 0.03em;
     background-color: var(--background-about-project);
@@ -615,8 +638,8 @@ img {
 }
 
 .backdrop.is-hiden {
-    /* opacity: 0; */
-    /* pointer-events: none; */
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
