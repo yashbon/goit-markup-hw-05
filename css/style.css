@@ -583,31 +583,69 @@ img {
 
 .about-project {
     position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
 }
 
-.about-project::before {
+.about-project-text {
     position: absolute;
-    display: inline-block;
-    visibility: hidden;
-    content: '';
-    /* content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.'; */
     width: 100%;
     height: 100%;
+    /* transform: translateY(-100%); */
+    /* top: 0; */
     padding: 63px 24px;
+    /* opacity: 0.1; */
+    /* visibility: hidden; */
+    pointer-events: none;
     color: var(--white-color);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: var(--background-about-project);
+    /* outline: 1px solid red; */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover .about-project-text,
+.project-link:focus .about-project-text {
+    /* visibility: visible; */
+    /* opacity: 1; */
+    /* top: 0; */
+    transform: translateY(-100%);
+    /* visibility: visible; */
+    /* transform: translateY(0%); */
+    /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); */
+}
+
+
+/* .project-link:hover .about-project {
+    opacity: 0;
+} */
+
+.about-project::before {
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* visibility: hidden; */
+    /* content: ''; */
+    /* content: 'Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.'; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* color: var(--white-color); */
     /* font-family: 'Roboto'; */
     /* font-style: normal; */
     /* font-weight: 400; */
-    font-size: 18px;
-    line-height: 1.56;
+    /* font-size: 18px; */
+    /* line-height: 1.56; */
     /* or 156% */
-    letter-spacing: 0.03em;
-    background-color: var(--background-about-project);
+    /* letter-spacing: 0.03em; */
+    /* background-color: var(--background-about-project); */
 }
 
-.about-project:hover::before {
+
+/* .about-project:hover::before {
     visibility: visible;
-}
+} */
 
 
 /* Hiden title */
@@ -635,11 +673,15 @@ img {
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transform: scale(1);
+    transition: opacity 2500ms linear, visibility 250ms linear, transform 250ms linear;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    /* visibility: hidden; */
+    transform: scale(2);
 }
 
 .modal {
