@@ -489,11 +489,11 @@ img {
     border-radius: 50%;
     fill: var(--social-client-link-color);
     background-color: var(--footer-soclink-background);
+    transition: background-color var(--anime), fill var(--anime);
 }
 
 .footer .social-link {
     fill: var(--white-color);
-    transition: background-color var(--anime), fill var(--anime);
 }
 
 .social-link:hover,
